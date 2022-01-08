@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 5, 2022 8:39:30 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="orm.Product" table="product" catalog="ecommerceapp" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="PProuctName" type="string">
+            <column name="p_prouct_name" length="45" />
+        </property>
+        <property name="PBrand" type="string">
+            <column name="p_brand" length="45" />
+        </property>
+        <property name="PDescription" type="string">
+            <column name="p_description" length="65535" />
+        </property>
+        <property name="PPrice" type="java.lang.Double">
+            <column name="p_price" precision="22" scale="0" />
+        </property>
+        <property name="PQty" type="java.lang.Double">
+            <column name="p_qty" precision="22" scale="0" />
+        </property>
+        <property name="PImage" type="string">
+            <column name="p_image" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
